@@ -1,0 +1,35 @@
+#form{
+    overflow-y: hidden;
+    height: 100%;
+    text-align: center;
+}
+form{
+    width: 500px;
+    margin:2rem auto;
+    background-color: rgba(128, 128, 128, 0.322);
+    box-shadow: 0px 0px 30px black;
+    padding: 2rem 0 2rem 0;
+    border-radius: 4%;
+    animation: display 1s 1;
+}
+
+@keyframes display{
+    from{transform: translateY(1%); opacity: 0.1;}
+    to{transform: translateY(0); opacity: 1;}
+}
+
+mat-form-field{
+    width: 360px;
+}
+
+.error{
+    width: 360px;
+    color: red;
+    text-align: left;
+    margin: -1rem 0 0.5rem 4.5rem;
+}
+
+a{
+    color: cyan;   
+}
+

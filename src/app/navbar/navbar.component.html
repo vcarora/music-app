@@ -1,0 +1,63 @@
+<nav>
+
+</nav>
+
+<!-- <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span> -->
+
+<mat-sidenav-container>
+    <span>Spotify</span>
+    <mat-sidenav id="nav" mode="side" opened>
+        <div id="logo">
+                <i class="fa-brands fa-spotify fa-4x icon"></i>
+                <!-- <span>Spotify</span> -->
+        </div>
+        <div id="buttons">
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a routerLink="/home">
+                            <i class="fa-solid fa-headphones fa-3x icon"></i> 
+                            <span>Songs</span>
+                        </a>
+                    </li>
+                    <li *ngIf="!(loginStatus$ | async) as loginStatus">
+                        <a routerLink="/login" *ngIf="loginStatus">
+                            <i class="fa-solid fa-user fa-3x icon"></i>
+                            <span>Login</span>
+                        </a>
+                    <!-- </li> -->
+                    <li *ngIf="!(loginStatus$ | async) as loginStatus">
+                        <a routerLink="/register" *ngIf="loginStatus">
+                            <i class="fa-regular fa-address-card fa-3x icon"></i>
+                            <span>Register</span>
+                        </a>
+                    </li>
+                    <li *ngIf="(loginStatus$ | async) as loginStatus">
+                        <a  routerLink="/playlist" *ngIf="loginStatus">
+                            <i class="fa-solid fa-music fa-3x icon"></i>
+                            <span>Playlist</span>
+                        </a>
+                    </li>
+                    <li *ngIf="(loginStatus$ | async) as loginStatus">
+                        <a  (click)="logout()" *ngIf="loginStatus">
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-3x icon"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

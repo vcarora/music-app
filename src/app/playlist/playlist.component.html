@@ -1,0 +1,28 @@
+<div class="playlist">
+    <div id="title">
+        <h1>
+            Spotify
+        </h1>
+        <h3>
+            You are what you listen to....
+        </h3>
+    </div>
+
+    <div style="margin-top: 2rem;width: 200px;margin: auto;text-align: center;">
+        <h3>Your songs</h3>
+    </div>
+
+    <div id="songs" *ngFor="let s of mySongData;let j=index">
+        <li class="container">
+            <img src="http://localhost:8091/downloadImage/{{s.trackId}}" alt="">
+            <div class="details">
+                <span class="name">{{s.trackName}}</span><br>
+                <span class="artist">{{s.artistName}}</span>
+            </div>
+            <div id="btn">
+            <button (click)="play(s.pseudoName)"><i class="fa-solid fa-circle-play fa-3x"></i></button>
+            <button (click)="deleteSong(this.email,s.pseudoName)"><i class="fa-solid fa-trash fa-3x"></i></button>
+            </div>
+        </li>
+</div>
+</div>

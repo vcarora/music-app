@@ -1,0 +1,16 @@
+div{
+    display: grid;
+    grid-template-columns: 2% 98%;
+}
+/* app-login{
+    width: 100%;
+} */
+
+#outlet{
+    animation: display 1s 1;
+}
+@keyframes display{
+    from{transform: translateY(5%); opacity: 0.1;}
+    to{transform: translateY(0); opacity: 1;}
+}
+

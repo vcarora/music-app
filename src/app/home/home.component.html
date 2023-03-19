@@ -1,0 +1,37 @@
+<div class="home">
+    <div id="title">
+        <h1>
+            Spotify
+        </h1>
+        <h3>
+            You are what you listen to....
+        </h3>
+        <h3>Trending Songs</h3>
+    </div>
+
+
+
+    <!-- <div style="margin-top: 2rem;width: 200px;margin: auto;text-align: center;">
+        
+    </div> -->
+
+    <div id="songs" *ngFor="let i of image;let j=index">
+        <li class="container">
+            <img src="http://localhost:8091/downloadImage/{{i.trackId}}" alt="">
+            <div class="details">
+                <span class="name">{{i.trackName}}</span><br>
+                <span class="artist">{{i.artistName}}</span>
+            </div>
+            <div id="btn">
+                <button (click)="play(j)"><i class="fa-solid fa-circle-play fa-3x"></i></button>
+                <button (click)="addToPlaylist(i,this.email)"><i class="fa-solid fa-circle-plus fa-3x"></i></button>
+            </div>
+        </li>
+        <!-- <div class="audio">
+            <audio id="myAudio" controls>
+                <source src="" type="audio/ogg">
+                <source src="" type="audio/mpeg">
+            </audio>
+        </div> -->
+    </div>
+</div>
